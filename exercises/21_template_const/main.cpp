@@ -39,7 +39,8 @@ private:
         for (unsigned int i = 0; i < N; ++i) {
             ASSERT(indices[i] < shape[i]);
             // TODO: 计算 index
-
+            m /= shape[i];
+            index += indices[i] * m;
         }
     }
 };

@@ -36,6 +36,7 @@ struct Tensor {
 private:
     unsigned int data_index(unsigned int const indices[N]) const {
         unsigned int index = 0;
+        unsigned int m = 1;
         for (unsigned int i = 0; i < N; ++i) {
             ASSERT(indices[i] < shape[i]);
             // TODO: 计算 index
